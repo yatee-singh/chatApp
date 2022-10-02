@@ -1,46 +1,5 @@
-/* .App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-} */
-
-
-  
-
-h1{
+h1 {
   margin: 0;
 }
 
@@ -97,50 +56,33 @@ h1{
 
 
 
-body{
+body {
   min-height: 100vh;
   background: #76b852;
-  /* fallback for old browsers */
+ 
   background: rgb(141, 194, 111);
   background: linear-gradient(90deg, rgba(141, 194, 111, 1) 0%, rgba(118, 184, 82, 1) 50%);
   font-family: "Roboto", sans-serif;
-  /* -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; */
-}
-
-
-
-/* chat room */
-
-.chat-body{
-display: flex;
-flex-direction: column;
-justify-content: space-between;
-width: 80vw;
-margin: auto;
 
 }
-/* input[type=text],
-#chat-button {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 1px solid #ddd;
-  color: #333;
-  font-size: 1em;
-  /* padding: .7em 1em;
-  margin-bottom: 1em; */
-  /* position: relative;
-  top: 15px;
-  float:left;
-  bottom:0;
-} */ */
 
-#send{
+
+
+.chat-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 80vw;
+  margin: auto;
+
+}
+
+#send {
   background: #e6e6e6;
   text-shadow: 0 1px 0 #f3f3f3;
   margin: .5em 0 2em 0;
   width: 120px;
-} 
+}
 
 .new-chat {
   position: absolute;
@@ -159,7 +101,7 @@ margin: auto;
   padding: 10px;
   box-sizing: border-box;
   font-size: 18px;
-  width:80%;
+  width: 80%;
   margin: auto;
   height: 40px;
   border: none;
@@ -167,7 +109,7 @@ margin: auto;
   color: #999;
   font-weight: 100;
   background: #ddd;
-  
+
 }
 
 .new-chat button {
@@ -204,9 +146,9 @@ main {
   font-family: Helvetica, Arial, Sans, sans-serif;
 }
 
-.headbar{
+.headbar {
   margin: auto;
-  padding:20px;
+  padding: 20px;
   color: #e6e6e6;
 }
 
@@ -219,9 +161,11 @@ main {
   padding-bottom: 0;
   margin-bottom: 0;
 }
-.username{
+
+.username {
   color: #00D025;
 }
+
 .message-content {
   padding: 11px;
   margin: 0px 11px;
@@ -232,6 +176,6 @@ main {
   min-height: fit-content;
 }
 
-.message{
+.message {
   min-height: fit-content;
 }
