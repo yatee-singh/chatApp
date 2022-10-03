@@ -2,7 +2,7 @@ import React, { useState,useEffect } from "react";
 import './App.css';
 //import TextField from "@material-ui/core/TextField";
 import io from "socket.io-client"
-const socket = io('http://localhost:7000')
+const socket = io('https://websocketchatappbackend.onrender.com')
 function Chat({username}) {
 
 	useEffect(() => {
