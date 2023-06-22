@@ -1,5 +1,5 @@
 import { useState } from 'react';
-
+import { ChakraProvider } from '@chakra-ui/react';
 import './App.css';
 import Comp from './comp.js';
 import Chat from './chatroom';
@@ -18,11 +18,12 @@ function App() {
   
  
   return (
+    <ChakraProvider>
     <div className="APP">
   
     {render ? <Chat username={username} /> : <Comp onSubmit={getData} render={render} setRender={setRender}/>}
     </div>
-    
+    </ChakraProvider>
     
   );
 }

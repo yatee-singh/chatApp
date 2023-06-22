@@ -1,5 +1,6 @@
 import React, { useState,useEffect } from "react";
 import './App.css';
+import { Button, Container, Heading, Input,Flex,Box } from "@chakra-ui/react";
 //import TextField from "@material-ui/core/TextField";
 import io from "socket.io-client"
 const socket = io('https://websocketchatappbackend.onrender.com')
@@ -73,26 +74,32 @@ function Chat({username}) {
   };
    
   return(
-    <div className="chat-body">
-		 <div class="new-chat">
+	<>
+	 <div className="headbar">
+		<Heading color='green' textAlign={'center'} id="app-title">Chat Website</Heading>
+	 </div>
+    <Container  width={'90%'} margin={'auto'}>
+	<Flex direction={'column'} justifyContent={'center'}>
+		<Box className="chat" overflow={'scroll'}  height={'70vh'}>
+		  {renderChat()}
+	  </Box>
+		 
 			<form onSubmit={onMessageSubmit}>
-				<input value={message} onChange={(e)=>setMessage(e.target.value)}type="text" id="message" />
-            <button id="send">Send</button>
+				<Flex class="new-chat" minWidth='max-content' alignItems='center' gap='2' pt={'4vh'} width={'100%'} margin={'auto'} bottom={'4vh'}>
+				<Input placeholder='Input Text' variant={'filled'} value={message} onChange={(e)=>setMessage(e.target.value)}type="text" id="message" />
+            <Button variant='outline' background={'green'} id="send" type="submit">Send</Button>
+			 </Flex>
 			</form>
             
-        </div>
-     <div className="headbar">
-		<h1 id="app-title">Chat Website</h1>
-	 </div>
+       
+    
   
 
 
-	  <div className="chat">
-		  {renderChat()}
-	  </div>
-		
-    </div>
-
+	  
+		</Flex>
+    </Container>
+</>
 
   )
 }
